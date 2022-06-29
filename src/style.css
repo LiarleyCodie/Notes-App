@@ -89,6 +89,25 @@ body {
   overflow-x: hidden;
 }
 
+/* WHEN NOTES CONTAINER HAVEN'T ANY NOTE */
+.notes-container .no-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+}
+
+.notes-container .fa-sticky-note-o {
+  font-size: 12rem;
+  color: var(--dark-grey);
+}
+
+.notes-container .no-note__text {
+  font-size: 2.4rem;
+  color: var(--dark-grey);
+}
+
 .notes-container .note:not(:last-child) {
   margin-bottom: 1rem;
 }
