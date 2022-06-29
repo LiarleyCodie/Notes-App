@@ -159,11 +159,20 @@ body {
   font-size: 3rem;
 }
 
+.notes-container .note .note__date_note-prefs .note-prefs .dots {
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
 /*======================= DROPDOWN =======================*/
 .notes-container .note .note__date_note-prefs .dropdown-menu {
   position: absolute;
   bottom: -4rem;
   right: 0;
+
+  visibility: hidden;
 
   background: #fff;
 
@@ -185,19 +194,10 @@ body {
   align-items: center;
 }
 
-.notes-container
-  .note
-  .note__date_note-prefs
-  .dropdown-menu
-  .dropdown-option:hover {
+.notes-container .note .note__date_note-prefs .dropdown-menu .dropdown-option:hover {
   background-color: rgb(240, 240, 240);
 }
 
-.notes-container
-  .note
-  .note__date_note-prefs
-  .dropdown-menu
-  .dropdown-option
-  i {
+.notes-container .note .note__date_note-prefs .dropdown-menu .dropdown-option i {
   margin-left: 1rem;
 }
