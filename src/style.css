@@ -46,7 +46,7 @@ body {
 
   padding: 1rem;
 
-  border-radius: 0.8rem;
+  border-radius: 1.2rem;
   border: 4px solid var(--main-color);
 
   overflow: hidden;
@@ -54,7 +54,7 @@ body {
 
 /* ADD NOTE BUTTON */
 .add-note-button {
-  --button-size: 6rem;
+  --button-size: 5rem;
 
   height: var(--button-size);
   width: var(--button-size);
@@ -93,6 +93,10 @@ body {
   margin-bottom: 1rem;
 }
 
+.notes-container .note:last-child {
+  margin-bottom: 8rem;
+}
+
 .notes-container .note {
   border-radius: 0.8rem;
 
@@ -120,7 +124,7 @@ body {
   color: var(--dark-grey);
 }
 
-/* Note Date and Dropdown Options */
+/*======================= NOTES n' DROPDOWN WRAPPER =======================*/
 .notes-container .note .note__date_note-prefs {
   border-top: 2px solid var(--background);
 
@@ -133,6 +137,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: relative;
 }
 
 .notes-container .note .note__date_note-prefs .date {
@@ -140,6 +146,8 @@ body {
 }
 
 .notes-container .note .note__date_note-prefs .note-prefs {
+  position: relative;
+
   line-height: 15%;
 
   height: 2rem;
@@ -149,4 +157,47 @@ body {
   color: var(--dark-grey);
 
   font-size: 3rem;
+}
+
+/*======================= DROPDOWN =======================*/
+.notes-container .note .note__date_note-prefs .dropdown-menu {
+  position: absolute;
+  bottom: -4rem;
+  right: 0;
+
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 0.5rem;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.notes-container .note .note__date_note-prefs .dropdown-menu .dropdown-option {
+  padding: 0.5rem 1.5rem;
+
+  color: var(--black);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notes-container
+  .note
+  .note__date_note-prefs
+  .dropdown-menu
+  .dropdown-option:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.notes-container
+  .note
+  .note__date_note-prefs
+  .dropdown-menu
+  .dropdown-option
+  i {
+  margin-left: 1rem;
 }
